@@ -15,7 +15,7 @@ class ChiffresRomainsTest {
 
 	@Test
 	void testPremierChiffre() {
-		assertEquals("I", cr.play());
+		assertEquals("I", cr.toChiffresRomains(1));
 	}
 
 }
