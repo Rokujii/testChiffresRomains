@@ -17,5 +17,9 @@ class ChiffresRomainsTest {
 	void testPremierChiffre() {
 		assertEquals("I", cr.toChiffresRomains(1));
 	}
+	void testSecondChiffre() {
+		assertEquals("II", cr.toChiffresRomains(2));
+		assertEquals("III", cr.toChiffresRomains(3));
+	}
 
 }

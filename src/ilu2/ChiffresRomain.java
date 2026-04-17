@@ -1,10 +1,15 @@
 package ilu2;
 
 public class ChiffresRomain {
-	private int chiffre;
 	
 	public String toChiffresRomains(int nombre) {
-		return "I";
+		StringBuilder chiffre = new StringBuilder();
+		
+		if (nombre <= 3) {
+			for (int i = 0; i<nombre; i++) chiffre.append("I");
+		}
+		
+		return chiffre.toString();
 	}
 	
 
