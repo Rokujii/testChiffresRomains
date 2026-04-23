@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class ChiffresRomainsTest {
+class ChiffresRomainTest {
 	private ChiffresRomain cr;
 
 	@BeforeEach
@@ -14,12 +14,21 @@ class ChiffresRomainsTest {
 	}
 
 	@Test
-	void testPremierChiffre() {
+	void testPremiereIteration() {
 		assertEquals("I", cr.toChiffresRomains(1));
 	}
-	void testSecondChiffre() {
+	
+	@Test
+	void testSecondeIteration() {
 		assertEquals("II", cr.toChiffresRomains(2));
 		assertEquals("III", cr.toChiffresRomains(3));
+	}
+	
+	@Test
+	void testTroisiemeIteration() {
+		assertThrows(IllegalArgumentException.class, () -> cr.toChiffresRomains(0));
+		assertThrows(IllegalArgumentException.class, () -> cr.toChiffresRomains(4000));
+		assertThrows(IllegalArgumentException.class, () -> cr.toChiffresRomains(-5));
 	}
 
 }

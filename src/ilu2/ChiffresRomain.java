@@ -9,6 +9,10 @@ public class ChiffresRomain {
 			for (int i = 0; i<nombre; i++) chiffre.append("I");
 		}
 		
+		if (nombre < 1 || nombre > 3999) {
+			throw new IllegalArgumentException("valeur incorrecte");
+			}
+		
 		return chiffre.toString();
 	}
 	
