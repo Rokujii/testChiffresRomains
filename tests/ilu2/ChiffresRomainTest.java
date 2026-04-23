@@ -31,4 +31,8 @@ class ChiffresRomainTest {
 		assertThrows(IllegalArgumentException.class, () -> cr.toChiffresRomains(-5));
 	}
 
+	@Test
+	void testQuatriemeIteration() {
+		assertEquals("IV", cr.toChiffresRomains(4));
+	}
 }
